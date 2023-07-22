@@ -1,0 +1,175 @@
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bitmoji {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.greeting {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.designation {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.center {
+  margin-top: 0px;
+}
+
+/* Social media buttons */
+
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #888;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.dark-mode .social-button {
+  color: #fff;
+}
+
+/* Resume button */
+.resume-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #888;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid #888;
+}
+
+.dark-mode .resume-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* About */
+.about-content {
+  margin-top: 30px;
+  
+}
+
+.about-content p {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9f9; 
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.footer-button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #888;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px  #888; 
+}
+
+.dark-mode footer {
+  background-color: #111;
+}
+
+.dark-mode .footer-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+
+
+/* Dark mode */
+.dark-mode {
+  background-color: #111;
+  color: #f9f9f9;
+}
+
+/* Moon swipe button */
+#darkModeToggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #333;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.moon,
+.moon-shadow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f9f9f9;
+}
+
+.moon {
+  left: 2px;
+  box-shadow: 4px 0 0 #333;
+}
+
+.moon-shadow {
+  left: 18px;
+  box-shadow: 4px 0 0 #222;
+}
