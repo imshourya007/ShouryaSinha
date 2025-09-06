@@ -91,19 +91,6 @@ body {
   border-color: #fff;
 }
 
-/* Custom LeetCode icon fallback */
-.social-button.leetcode i::before {
-  content: "LC";
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 0.8em;
-}
-
-.social-button.leetcode i.fab {
-  display: none;
-}
-
 #terminal {
   background-color: #000;
   color: #00ff00;
