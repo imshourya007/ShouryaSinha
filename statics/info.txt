@@ -1,0 +1,12 @@
+Hello, I’m Shourya Sinha.
+A Backend Developer with 4+ years of experience
+building scalable microservices and automation systems.
+
+I specialize in Python, FastAPI, Django, and Node.js,
+with strong expertise in PostgreSQL, MongoDB, and
+Docker-based deployments. My focus is always on
+clean code, observability, and performance.
+
+I enjoy solving complex problems, optimizing systems,
+and experimenting with new tools that improve
+developer productivity and system scalability.

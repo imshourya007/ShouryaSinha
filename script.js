@@ -24,27 +24,32 @@ darkModeToggle.addEventListener('click', () => {
   setDarkModePreference(body.classList.contains('dark-mode'));
 });
 
-// JavaScript code for displaying paragraphs one after another
-    const para1 = document.getElementById('para1');
-    const para2 = document.getElementById('para2');
-    const para3 = document.getElementById('para3');
+async function loadTerminalInfo() {
+  try {
+    const res = await fetch("statics/info.txt");
+    if (!res.ok) throw new Error("Failed to fetch info.txt");
+    const text = await res.text();
 
-    para1.style.display = 'none'; // Hide the first paragraph initially
-    para2.style.display = 'none';
-    para3.style.display = 'none';
+    const container = document.getElementById("info-container");
+    container.textContent = ""; // clear "Loading..."
 
-    // Function to show the paragraphs one after another
-setTimeout(() => {
-  para1.style.display = 'block';
-}, 1000); // Adjust the delay (in milliseconds) as desired
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        container.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40); // typing speed (ms)
+      }
+    }
+    typeWriter();
+  } catch (err) {
+    console.error(err);
+    document.getElementById("info-container").textContent = "Error loading info.";
+  }
+}
 
-setTimeout(() => {
-  para2.style.display = 'block';
-}, 2000); // Adjust the delay (in milliseconds) as desired
+window.addEventListener("DOMContentLoaded", loadTerminalInfo);
 
-setTimeout(() => {
-  para3.style.display = 'block';
-}, 3000); // Adjust the delay (in milliseconds) as desired
 
 // Apply dark mode preference on page load
 applyDarkModePreference();
